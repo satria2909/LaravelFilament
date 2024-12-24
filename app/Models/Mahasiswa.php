@@ -126,6 +126,6 @@ class Mahasiswa extends Model
     protected $table = 'mahasiswas';
     protected $primaryKey = 'id';
     public $incrementing = true;
-    protected $fillable = ['nim', 'nama', 'alamat', 'tanggal_lahir', 'jurusan'];
+    protected $fillable = ['nim', 'nama', 'jenis_kelamin', 'alamat', 'tanggal_lahir', 'jurusan'];
 
 }

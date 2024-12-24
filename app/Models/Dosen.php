@@ -10,6 +10,8 @@ class Dosen extends Model
     use HasFactory;
 
     protected $primaryKey = 'nidn';
+    public $incrementing = false; // Non-auto incrementing
+    protected $keyType = 'string';
     protected $fillable = ['nidn', 'nama', 'tanggal_lahir', 'alamat', 'kode_makul'];
 
     public function makul()

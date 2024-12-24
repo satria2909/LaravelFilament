@@ -10,6 +10,9 @@ class Makul extends Model
     use HasFactory;
 
     protected $primaryKey = 'kode_makul';
+    // Tipe data primary key adalah string
+    public $incrementing = false; // Non-auto incrementing
+    protected $keyType = 'string';
     protected $fillable = ['kode_makul', 'nama_makul', 'sks'];
 
     public function dosens()

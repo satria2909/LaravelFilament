@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
-            $table->string('nim')->unique();
-            $table->string('nama');
-            $table->string('alamat');
+            $table->string('nim', 13)->unique();
+            $table->string('nama', 128);
+            $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->string('alamat', 128);
             $table->date('tanggal_lahir');
-            $table->string('jurusan');
+            $table->enum('jurusan', ['TI', 'SI', 'ILKOM']);
             $table->timestamps();
         });
     }
